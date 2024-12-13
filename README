@@ -1,0 +1,105 @@
+Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+
+
+Network Latency Measurement Tool
+This Python script measures network latency to a given destination using the ping command. It collects and logs latency results, and generates a graphical report. The test can be stopped at any time using Ctrl+C, which will save the results and create a graph.
+
+Features
+
+Measures network latency using ping.
+Saves latency results in a log file.
+Generates graphical reports of latency over time.
+Supports interruption via Ctrl+C.
+Prerequisites
+
+Python 3.x installed.
+Required libraries: matplotlib.
+Install dependencies:
+
+pip install matplotlib
+Usage
+
+Ensure the target destination is reachable via ping.
+Run the script:
+python net_latency.py
+Example:
+
+python net_latency.py --destination 8.8.8.8
+--destination: The IP address or hostname of the target server (required).
+Stop the test using Ctrl+C. The results will be saved, and a graph will be generated.
+Output
+
+Log file: Latency results with timestamps.
+Graph: Visual representation of latency over time.
+Notes
+
+Ensure the target server is reachable to avoid failed pings.
+Results are saved in the current directory with a timestamped filename.
+Türkçe Versiyon
+
+Ağ Gecikmesi Ölçüm Aracı
+Bu Python betiği, ping komutunu kullanarak belirtilen bir hedefe ağ gecikmesini ölçer. Gecikme sonuçlarını toplar, kaydeder ve grafiksel bir rapor oluşturur. Test, Ctrl+C ile herhangi bir zamanda durdurulabilir ve sonuçlar kaydedilir.
+
+Özellikler
+
+ping kullanarak ağ gecikmesini ölçer.
+Gecikme sonuçlarını log dosyasına kaydeder.
+Zaman içindeki gecikmelerin grafik raporlarını oluşturur.
+Ctrl+C ile kesintiyi destekler.
+Gereksinimler
+
+Python 3.x yüklü olmalı.
+Gerekli kütüphaneler: matplotlib.
+Bağımlılıkları yüklemek için:
+
+pip install matplotlib
+Kullanım
+
+Hedef cihazın ping ile erişilebilir olduğundan emin olun.
+Betiği çalıştırın:
+python net_latency.py
+Örnek:
+
+python net_latency.py --destination 8.8.8.8
+--destination: Hedef sunucunun IP adresi veya hostname (zorunlu).
+Testi Ctrl+C ile durdurun. Sonuçlar kaydedilecek ve grafik oluşturulacaktır.
+Çıktı
+
+Log dosyası: Zaman damgalarıyla birlikte kaydedilmiş gecikme sonuçları.
+Grafik: Zaman içindeki gecikmelerin görsel temsili.
+Notlar
+
+Hedef sunucunun erişilebilir olduğundan emin olun, aksi takdirde ping başarısız olabilir.
+Sonuçlar, zaman damgalı bir dosya adıyla mevcut dizine kaydedilir.
